@@ -4,20 +4,26 @@
     <headerDC />
 
     <!-- Main -->
-
+    <mainDC />
 
     <!-- Footer -->
+    <footerDC />
 
   </div>
 </template>
 
 <script>
 import headerDC from '@/components/headerDC.vue'
+import mainDC from '@/components/mainDC.vue'
+import footerDC from '@/components/footerDC.vue'
 
 export default {
   name: 'App',
   components: {
-    headerDC
+    headerDC,
+    mainDC,
+    footerDC,
+
   }
 }
 </script>
@@ -40,4 +46,8 @@ export default {
     max-width: 1000px;
     margin: 0 auto;
   }
+
+  // .background-img-footer {
+  //   background-image: url('@/assets/img/footer-bg.jpg');
+  // }
 </style>

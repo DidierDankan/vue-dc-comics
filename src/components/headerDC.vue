@@ -1,15 +1,17 @@
 <template>
-  <header class="container">
-      <a href="/">
-          <img src="@/assets/img/dc-logo.png" alt="DC logo">
-      </a>
+    <header class="container">
+        <a href="/">
+            <img src="@/assets/img/dc-logo.png" alt="DC logo">
+        </a>
       <!-- header nav -->
-      <ul>
-          <li v-for="(link, index) in links" :key="index" >
-              <a :class ="{ 'active': link.current }" :href="link.url"> {{ link.text }} </a>
-          </li>
-      </ul>
-  </header>
+        <ul>
+            <li v-for="(link, index) in links" :key="index" >
+                <a :class ="{ active: link.current }" :href="link.url" >
+                   {{ link.text }} 
+                </a>
+            </li>
+        </ul>
+    </header>
 </template>
 
 <script>
@@ -18,16 +20,16 @@ export default {
     data() {
         return {
             links:[
-                {text:'characters', url: '/characters', current:true},
-                {text:'comics', url: '/comics', current:true},
+                {text:'characters', url: '/characters', current:false},
+                {text:'comics', url: '/comics', current:false},
                 {text:'movies', url: '/movies', current:true},
-                {text:'tv', url: '/tv', current:true},
-                {text:'games', url: '/games', current:true},
-                {text:'collectibles', url: '/collectibles', current:true},
-                {text:'videos', url: '/videos', current:true},
-                {text:'fans', url: '/fans', current:true},
-                {text:'news', url: '/news', current:true},
-                {text:'shop', url: '/shop', current:true},
+                {text:'tv', url: '/tv', current:false},
+                {text:'games', url: '/games', current:false},
+                {text:'collectibles', url: '/collectibles', current:false},
+                {text:'videos', url: '/videos', current:false},
+                {text:'fans', url: '/fans', current:false},
+                {text:'news', url: '/news', current:false},
+                {text:'shop', url: '/shop', current:false},
             ]
         }
     },
@@ -86,7 +88,7 @@ export default {
         visibility: visible;
     }
 
-    li > a:active,
+    li > a.active,
     li > a:hover {
         color: #0282F9;
     }
