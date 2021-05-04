@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!-- Header -->
-
+    <headerDC />
 
     <!-- Main -->
 
@@ -22,6 +22,22 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss">
+  /*  GENERALS */
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
 
+  body {
+    font-family: sans-serif;
+  }
+
+  /* UTILITIES */
+
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
 </style>
