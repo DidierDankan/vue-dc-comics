@@ -13,7 +13,7 @@
                                 DC Comics
                             </li>
                             <li v-for="(link, index) in linksFooter" :key="index">
-                                <a href="link.url">
+                                <a :href="link.url">
                                     {{ link.text }}
                                 </a>
                             </li>       
@@ -24,7 +24,7 @@
                                 Shop
                             </li>
                             <li v-for="(link, index) in linksFooter2" :key="index">
-                                <a href="link.url">
+                                <a :href="link.url">
                                     {{link.text}}
                                 </a>
                             </li>
@@ -37,7 +37,7 @@
                                 DC 
                             </li>
                             <li v-for="(link, index) in linksFooter3" :key="index">
-                                <a href="link.url">
+                                <a :href="link.url">
                                     {{ link.text }}
                                 </a>
                             </li>       
@@ -50,7 +50,7 @@
                                 Sites 
                             </li>
                             <li v-for="(link, index) in linksFooter4" :key="index">
-                                <a href="link.url">
+                                <a :href="link.url">
                                     {{ link.text }}
                                 </a>
                             </li>       
@@ -65,8 +65,23 @@
         </div>
         <!-- footer del footer -->
         <div class="footer-foot">
-            <div class="container">
-
+            <div class="container ">
+                <button class="signUp-btn">
+                    sign up now!
+                </button>
+                <div class="footer-socials">
+                    <ul>
+                        <li class="follow-social">
+                            follow us
+                        </li>
+                        <li v-for="(social, index) in socialLinks" :key="index">
+                            <a :href="social.links">
+                                <img :src="social.url" :alt="social.links">
+                            </a>
+                        </li>
+                    </ul>
+                    
+                </div>
             </div>
         </div>
         
@@ -114,6 +129,13 @@ export default {
                 {text:'dC Power Visa', url: '/DCPowerVisa'},
                 
             ],
+            socialLinks: [
+                {links:'/facebook', url:require('../assets/img/footer-facebook.png')},
+                {links:'/periscope', url:require('../assets/img/footer-periscope.png')},
+                {links:'/pinterest', url:require('../assets/img/footer-pinterest.png')},
+                {links:'/twitter', url:require('../assets/img/footer-twitter.png')},
+                {links:'/youtube', url:require('../assets/img/footer-youtube.png')},
+            ],
 
             
         }
@@ -125,16 +147,6 @@ export default {
     footer {       
         background-image: url(../assets/img/footer-bg.jpg);
     }
-    /* .bg-img {
-        width: 98.8vw;        
-        position: relative;
-        z-index: -1;
-    }
-
-    .bg-img img {
-        width: 100%;
-        position: absolute;
-    } */
 
     .div-layer {
         display: flex;
@@ -200,10 +212,50 @@ export default {
         top: -33px;
 
     }
+/* footer del footer */
 
     .footer-foot {
         height: 90px;
         background: #303030;
+    }
+
+    .footer-foot .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; 
+        height: 100%;
+    }
+
+    button.signUp-btn {
+        padding: 10px 10px;
+        text-transform: uppercase;
+        background: transparent;
+        font-weight: 600;
+        color: #fff;
+        border: 1px solid #0282F9;
+        cursor: pointer;
+    }
+
+    .footer-socials ul  {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+    }
+
+    .footer-socials ul li {
+        margin-left: 15px
+    }
+
+    .footer-socials ul li img {
+        height: 30px;
+    }
+
+    .follow-social {
+        text-transform: uppercase;
+        color: #0282F9;
+        font-weight: 600;
+        font-size: .8rem;
     }
 
 </style>

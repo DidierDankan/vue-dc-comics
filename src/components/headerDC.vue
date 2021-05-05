@@ -9,6 +9,7 @@
                 <a :class ="{ active: link.current }" :href="link.url" >
                    {{ link.text }} 
                 </a>
+                <div  :class="[{ active: link.current }, 'blue-border-hover']"></div>
             </li>
         </ul>
     </header>
@@ -21,8 +22,8 @@ export default {
         return {
             links:[
                 {text:'characters', url: '/characters', current:false},
-                {text:'comics', url: '/comics', current:false},
-                {text:'movies', url: '/movies', current:true},
+                {text:'comics', url: '/comics', current:true},
+                {text:'movies', url: '/movies', current:false},
                 {text:'tv', url: '/tv', current:false},
                 {text:'games', url: '/games', current:false},
                 {text:'collectibles', url: '/collectibles', current:false},
@@ -56,7 +57,7 @@ export default {
     ul li {
         position:relative;
         margin-right: 15px;
-        line-height: 4;     
+        line-height: 3.45;     
     }
 
     ul li:last-child {
@@ -83,8 +84,8 @@ export default {
     border-radius: 5px;
     }
 
-    ul li.blue-border-hover.active,
-    ul li.blue-border-hover:hover {
+    ul li div.active,
+    ul li:hover div.blue-border-hover {
         visibility: visible;
     }
 

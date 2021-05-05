@@ -40,6 +40,10 @@ export default {
     font-family: sans-serif;
   }
 
+  img {
+    max-width: 100%;
+  }
+
   /* UTILITIES */
 
   .container {
