@@ -1,10 +1,17 @@
 <template>
     <footer >
         
-        <div class="container div-layer">
-            <div class="footer-head">
-
+        <div class="footer-head">
+            <div class="container">
+                <ul>
+                    <li v-for="(item, index) in linksShop" :key="index">
+                        <img :src="item.link" :alt="item.text">
+                        <a href="/"> {{ item.text }}</a>
+                    </li>
+                </ul>
             </div>
+        </div>
+        <div class="container div-layer">
             <div class="footer-main">
                 <div class="main-left">
                     <div> 
@@ -91,6 +98,28 @@ export default {
     name:'footerDC',
     data(){
         return {
+            linksShop: [
+                {
+                    link:require('@/assets/img/buy-comics-digital-comics.png'),
+                    text:'digital comics',
+                },
+                {
+                    link:require('@/assets/img/buy-comics-merchandise.png'),
+                    text:'dc merchandise',
+                },
+                {
+                    link:require('@/assets/img/buy-comics-subscriptions.png'),
+                    text:'subscription',
+                },
+                {
+                    link:require('@/assets/img/buy-comics-shop-locator.png'),
+                    text:'comic shop locator',
+                },
+                {
+                    link:require('@/assets/img/buy-dc-power-visa.svg'),
+                    text:'dc power visa',
+                },
+            ],
             linksFooter:[    
                 {text:'characters', url: '/characters'},
                 {text:'comics', url: '/comics'},
@@ -134,14 +163,13 @@ export default {
                 {links:'/twitter', url:require('../assets/img/footer-twitter.png')},
                 {links:'/youtube', url:require('../assets/img/footer-youtube.png')},
             ],
-
-            
+           
         }
     }
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
     footer {       
         background-image: url(../assets/img/footer-bg.jpg);
     }
@@ -154,6 +182,44 @@ export default {
         height: 100%;
         margin: 0 auto;
         z-index: 1;
+    }
+/* footer head */
+    .footer-head {
+        .container {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+        background: #0282F9;
+        height: 140px;
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+            list-style: none;
+            li {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                
+                a{
+                    margin-left:10px;
+                    font-size: .75rem;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    color: #fff;
+                }
+            }
+        }       
+    }
+
+    .footer-head .container ul li img {
+        height:40px
+    }
+
+    .footer-head .container ul li:last-child img{
+        height: 30px;
     }
 
     .footer-main {
@@ -205,9 +271,9 @@ export default {
 
     .main-right img {
         position: absolute;
-        width: 70%;
+        width: 75%;
         right: 0;
-        top: -33px;
+        top: -65px;
 
     }
 /* footer del footer */

@@ -7,7 +7,6 @@
           
         <div class="current">
             <h2>
-
                 current series
             </h2>
         </div>
