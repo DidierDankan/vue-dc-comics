@@ -126,47 +126,6 @@ export default {
 </script>
 
 <style scoped lang="scss">  
-.jumbotrom {
-    height: 285px;
-    background-image: url(../assets/img/jumbotron.jpg);
-    background-size: cover;
-    background-position: top;
-}
-
-
-.comics {
-    position: relative;
-    background: #1C1C1C;
-    height: auto;
-    .container {
-        display:flex;
-        justify-content: center;
-        padding: 40px 5px;
-        flex-wrap: wrap;
-    }
-    .current {
-        position: absolute;
-        top: -25px;
-        background: #0282F9;
-        font-weight: 600;
-        text-transform: uppercase;
-        color: #fff;
-        left: 170px;
-        padding: 10px;
-    }
-    .load-btn {
-        text-align: center;
-    }
-    .btn {
-        margin-bottom: 20px;
-        padding: 8px 45px;
-        background: #0282F9;
-        font-weight: 600;
-        text-transform: uppercase;
-        color: #fff;
-        border: transparent;
-        cursor: pointer;
-    }
-}
+@import '../Styles/mainDC';
 
 </style>

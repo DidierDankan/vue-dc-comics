@@ -1,0 +1,139 @@
+/* footer head */
+/* scss funziona cosi il nesting!! */
+.footer-head {
+    .container {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+    background: #0282F9;
+    height: 140px;
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        list-style: none;
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            
+            a{
+                margin-left:10px;
+                font-size: .75rem;
+                text-transform: uppercase;
+                text-decoration: none;
+                color: #fff;
+            }
+        }
+    }       
+}
+
+.footer-head .container ul li img {
+    height:45px
+}
+
+.footer-head .container ul li:last-child img{
+    height: 30px;
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* footer main left */
+.footer-main .main-left {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+}
+
+.footer-main .main-left > div {
+    margin-right: 35px;
+}
+
+.footer-main .main-left > div:last-child{
+    margin-right: 0;
+}
+
+.footer-main .main-left ul {
+    margin-bottom: 10px;
+    list-style: none;
+}
+
+.footer-main .main-left ul li:first-child {
+    margin-bottom: 5px;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.footer-main .main-left ul li a {
+    font-size: .8rem;
+    color: #69646D;
+    line-height: 1.5;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+/* footer main right */
+.main-right {
+    flex-grow: 1;
+    position: relative;
+    overflow-y: hidden;
+}
+
+.main-right img {
+    position: absolute;
+    width: 75%;
+    right: 0;
+    top: -65px;
+
+}
+/* footer del footer */
+
+.footer-foot {
+    height: 90px;
+    background: #303030;
+}
+
+.footer-foot .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    height: 100%;
+}
+
+button.signUp-btn {
+    padding: 10px 10px;
+    text-transform: uppercase;
+    background: transparent;
+    font-weight: 600;
+    color: #fff;
+    border: 1px solid #0282F9;
+    cursor: pointer;
+}
+
+.footer-socials ul  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.footer-socials ul li {
+    margin-left: 15px
+}
+
+.footer-socials ul li img {
+    height: 30px;
+}
+
+.follow-social {
+    text-transform: uppercase;
+    color: #0282F9;
+    font-weight: 600;
+    font-size: .8rem;
+}

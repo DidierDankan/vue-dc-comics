@@ -37,63 +37,8 @@ export default {
 }
 </script>
 
-<style scoped>
-    header {
-        display:flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 0;
-    }
-
-    header a img {
-        height: 70px;
-    }
-
-    ul {
-        display: flex;
-        list-style: none;
-    }
-
-    ul li {
-        position:relative;
-        margin-right: 15px;
-        line-height: 3.45;     
-    }
-
-    ul li:last-child {
-        margin-right: 0;
-    }
-
-    li > a {
-        font-size: .7rem;
-        color: #4A4C5F;
-        font-weight: 600;
-        text-decoration: none;
-        text-transform: uppercase;
-    }
-
-    .blue-border-hover {
-    visibility: hidden; 
-    position: absolute;
-    bottom: -50%;
-    left: 50%;
-    width: 35px;
-    height: 3px;
-    transform: translate(-50%, -90%);
-    background: #0282F9;
-    border-radius: 5px;
-    }
-
-    ul li div.active,
-    ul li:hover div.blue-border-hover {
-        visibility: visible;
-    }
-
-    li > a.active,
-    li > a:hover {
-        color: #0282F9;
-    }
-    
+<style scoped lang="scss">
+@import '../Styles/headerDC';
 
 
 </style>
