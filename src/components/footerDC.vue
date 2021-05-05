@@ -60,8 +60,7 @@
                 <div class="main-right">
                     <img src="@/assets/img/dc-logo-bg.png" alt="dc logo footer">
                 </div>
-            </div>
-            
+            </div>           
         </div>
         <!-- footer del footer -->
         <div class="footer-foot">
@@ -79,8 +78,7 @@
                                 <img :src="social.url" :alt="social.links">
                             </a>
                         </li>
-                    </ul>
-                    
+                    </ul>           
                 </div>
             </div>
         </div>

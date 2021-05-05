@@ -4,7 +4,12 @@
     <headerDC />
 
     <!-- Main -->
-    <mainDC />
+    <main>
+
+
+      <mainDC />
+
+    </main>
 
     <!-- Footer -->
     <footerDC />
@@ -40,10 +45,6 @@ export default {
     font-family: sans-serif;
   }
 
-  img {
-    max-width: 100%;
-  }
-
   /* UTILITIES */
 
   .container {
@@ -51,7 +52,4 @@ export default {
     margin: 0 auto;
   }
 
-  // .background-img-footer {
-  //   background-image: url('@/assets/img/footer-bg.jpg');
-  // }
 </style>
